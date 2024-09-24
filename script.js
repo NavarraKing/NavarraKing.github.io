@@ -21,7 +21,8 @@ document.getElementById("registerForm").addEventListener('submit', function(even
     document.getElementById("result").innerHTML = `
     <h3>Válasz a szervertől:</h3>
     <p>Név: ${result.name}</p>
-    <p>E-mail: ${result.email}</p>`;
+    <p>E-mail: ${result.email}</p>
+    <p>Gáspár Dani megbasztam anyádat</p>`;
     })
     .catch(error => {
         document.getElementById('result').innerHTML = `<p>Hiba történt: ${error.message}</p>`;
