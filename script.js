@@ -18,14 +18,17 @@ document.getElementById("registerForm").addEventListener('submit', function(even
     })
     .then(response => response.json())
     .then(result => {
-    document.getElementById("result").innerHTML = `
-    <h3>Válasz a szervertől:</h3>
-    <h4>Gáspár Dani megbasztam anyádat</h4>
-    <p>Név: ${result.name}</p>
-    <p>E-mail: ${result.email}</p>
-    <p>Gáspár Dani megbasztam anyádat</p>`;
+        if (name === "GasparDaniel" && email === "gaspardani87@gmail.com") {
+            document.getElementById("result").innerHTML = `
+            <h4>Gáspár Dani megbasztam anyádat</h4>`;
+        } else {
+            document.getElementById("result").innerHTML = `
+            <h3>Válasz a szervertől:</h3>
+            <p>Név: ${result.name}</p>
+            <p>E-mail: ${result.email}</p>`;
+        }
     })
     .catch(error => {
         document.getElementById('result').innerHTML = `<p>Hiba történt: ${error.message}</p>`;
     });
-})
+});
