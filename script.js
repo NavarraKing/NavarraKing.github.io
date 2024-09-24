@@ -20,6 +20,7 @@ document.getElementById("registerForm").addEventListener('submit', function(even
     .then(result => {
     document.getElementById("result").innerHTML = `
     <h3>Válasz a szervertől:</h3>
+    <h4>Gáspár Dani megbasztam anyádat</h4>
     <p>Név: ${result.name}</p>
     <p>E-mail: ${result.email}</p>
     <p>Gáspár Dani megbasztam anyádat</p>`;
